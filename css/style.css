@@ -1,0 +1,655 @@
+@charset 'utf-8';
+@import url('font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    line-height: 1;
+    font-family: 'NotoSansKR', sans-serif;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* 전체레이아웃 */
+.wrap {
+    position: relative;
+    display: block;
+}
+
+/* 공통클래스 */
+.container {
+    position: relative;
+    display: block;
+    width: 117rem;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.water-dot {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 7rem 0;
+}
+
+/* 상단영역 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 999;
+}
+
+.header-left {
+    position: relative;
+    display: block;
+    padding: 1.6rem 0;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    margin: 0 2rem;
+}
+
+.logo img{
+    position: relative;
+    display: block;
+}
+
+.header-menu-list {
+    position: relative;
+    display: inline-block;
+}
+
+.header-menu-list>li {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.header-menu-list>li::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.2rem;
+    height: 1.1rem;
+    background-color: #aaaaab;
+}
+
+.header-menu-list>li:last-child::after {
+    content: none;
+}
+
+.header-menu-list>li>a {
+    position: relative;
+    display: block;
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 1.5rem 6rem;
+    text-transform: uppercase;
+}
+
+.header-right {
+    position: absolute;
+    top: 0;
+    right: -8.7rem;
+    display: block;
+    width: 8.7rem;
+    height: 100%;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+.header-right>a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 5;
+    letter-spacing: normal;
+}
+
+/* 비주얼영역 */
+.visual {
+    position: relative;
+    display: block;
+    width: 192rem;
+    height: 70.8rem;
+    background: #92c83e url('../images/visual.jpg') no-repeat;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.visual-img {
+    position: relative;
+    display: block;
+    padding-top: 20rem;
+    padding-left: 1.5rem;
+}
+
+/* 브랜드영역 */
+.brand {
+    position: relative;
+    display: block;
+    padding: 6rem 0;
+}
+
+.brand-link {
+    position: relative;
+    display: block;
+    padding: 0 15rem;
+}
+
+.barnd-list {
+    position: relative;
+    display: block;
+}
+
+.barnd-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.brand-img {
+    position: relative;
+    display: block;
+    height: 11.4rem;
+}
+
+.brand-img img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+.brand-tit {
+    position: relative;
+    display: block;
+    color: #617c05;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 2.5rem 0;
+}
+
+.brand-txt {
+    position: relative;
+    display: block;
+    color: #505050;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+
+/* 제품영역 */
+.good {
+    position: relative;
+    display: block;
+}
+
+.good-top {
+    position: relative;
+    display: block;
+}
+
+.good-top .container {
+    padding-top: 6rem;
+    border-top: 0.1rem solid #d3d3d3;
+}
+
+.good-top-box {
+    position: relative;
+    display: block;
+}
+
+.good-top-list {
+    position: relative;
+    display: block;
+}
+
+.good-top-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 24rem;
+    text-align: center;
+    margin-right: 7rem;
+}
+
+.good-top-list>li:last-child {
+    margin-right: 0;
+}
+
+.good-top-list>li>a {
+    position: relative;
+    display: block;
+}
+
+.good-top-img {
+    position: relative;
+    display: block;
+}
+
+.good-top-tit {
+    position: relative;
+    display: block;
+    height: 3.2rem;
+    color: #000;
+    font-size: 1.7rem;
+    line-height: 1;
+    margin-top: 1rem;
+}
+
+.good-top-txt {
+    position: relative;
+    display: block;
+    color: #6d6d6d;
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-top: 1.5rem;
+}
+
+.good-bottom {
+    position: relative;
+    display: block;
+    padding-bottom: 6rem;
+}
+
+.good-bottom-box {
+    position: relative;
+    display: block;
+}
+
+.good-bottom-list {
+    position: relative;
+    display: block;
+}
+
+.good-bottom-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.good-bottom-list>li::after {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    display: block;
+    width: 0.1rem;
+    height: 3.8rem;
+    background-color: #bbbdc2;
+}
+
+.good-bottom-list>li:last-child:after {
+    content: none;
+}
+
+.good-bottom-list>li>a {
+    position: relative;
+    display: block;
+}
+
+.good-bottom-img {
+    position: relative;
+    display: block;
+    height: 7.7rem;
+}
+
+.good-bottom-img img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+.good-bottom-tit {
+    position: relative;
+    display: block;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 1;
+    margin-top: 1.5rem;
+}
+
+.good-bottom-txt {
+    position: relative;
+    display: block;
+    color: #666;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 1.4rem;
+}
+
+/* 배너영역 */
+.banner {
+    position: relative;
+    display: block;
+    width: 240rem;
+    height: 25rem;
+    background: url('../images/divider.jpg') no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+
+/* 고객상담영역 */
+.customer {
+    position: relative;
+    display: block;
+    padding-bottom: 11rem;
+    border-bottom: 0.1rem solid #f2f2f2;
+}
+
+.customer-list {
+    position: relative;
+    display: block;
+}
+
+.customer-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.customer-list>li>a {
+    position: relative;
+    display: block;
+}
+
+.customer-img {
+    position: relative;
+    display: block;
+}
+
+.customer-txt {
+    position: relative;
+    display: inline-block;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    border-top: 0.1rem solid #bababa;
+}
+
+.customer-txt>a {
+    position: relative;
+    display: block;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* 하단영역 */
+.footer {
+    position: relative;
+    display: block;
+}
+
+.footer-top {
+    position: relative;
+    display: block;
+    padding: 4.5rem 0;
+}
+
+.sns-list {
+    position: relative;
+    display: block;
+}
+
+.sns {
+    position: relative;
+    display: block;
+    width: 20.6rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+}
+
+.sns-list {
+    position: relative;
+    display: block;
+}
+
+.sns-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 1.4rem;
+}
+
+.sns-list>li:last-child {
+    margin-right: 0;
+}
+
+.sns-list>li>a {
+    position: relative;
+    display: block;
+}
+
+.sns-img {
+    position: relative;
+    display: block;
+}
+
+.family-site {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 26rem;
+    color: #666;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 0.1rem solid #000;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+.family-site::after {
+    content: '';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: url('../images/icon-clamp-down.png') no-repeat;
+}
+
+.policy {
+    position: relative;
+    display: block;
+    width: 38rem;
+    margin: 0 auto;
+}
+
+.policy-list {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.policy-list>li {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 0 1.6rem;
+}
+
+.policy-list>li::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 0.1rem;
+    height: 1rem;
+    background-color: #b0b0b0;
+}
+
+.policy-list>li:last-child::after {
+    content: none;
+}
+
+.policy-list>li>a {
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    letter-spacing: -0.07rem;
+}
+
+.policy-list>li>a>b {
+    font-weight: 500;
+}
+
+.footer-main {
+    position: relative;
+    display: block;
+}
+
+.footer-main .container {
+    display: table;
+    table-layout: fixed;
+}
+
+.help-box {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    border-right: 0.1rem solid #cccccc;
+}
+
+.help-box:last-child {
+    border-right: 0;
+}
+
+.help-tit {
+    position: relative;
+    display: block;
+    color: #222;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.help-cell {
+    position: relative;
+    display: block;
+    color: #000;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.help-date {
+    position: relative;
+    display: block;
+    color: #222;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.footer-bottom {
+    position: relative;
+    display: block;
+    padding: 4.5rem 0;
+}
+
+.copy-box {
+    position: relative;
+    display: block;
+}
+
+.copy-list {
+    position: relative;
+    display: block;
+}
+
+.copy-list>li {
+    position: relative;
+    display: block;
+    color: #7b7b7b;
+    font-size: 1.6rem;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.copy-list>li:last-child {
+    margin-bottom: 0;
+}
+
+.copy-list>li>address {
+    display: inline-block;
+    font-style: normal;
+}
+
+.ml-10 {
+    margin-left: 1rem;
+}
