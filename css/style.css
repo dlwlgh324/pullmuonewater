@@ -86,7 +86,7 @@ body {
     margin: 0 2rem;
 }
 
-.logo img{
+.logo img {
     position: relative;
     display: block;
 }
@@ -493,6 +493,11 @@ body {
     top: 0;
     right: 0;
     display: block;
+}
+
+.family-bt {
+    position: relative;
+    display: block;
     width: 26rem;
     color: #666;
     font-size: 1.8rem;
@@ -506,16 +511,43 @@ body {
     cursor: pointer;
 }
 
-.family-site::after {
+.family-bt::after {
     content: '';
     position: absolute;
-    right: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    display: block;
+    right: 3rem;
     width: 0.6rem;
     height: 0.6rem;
     background: url('../images/icon-clamp-down.png') no-repeat;
+}
+
+.family-site-box {
+    position: absolute;
+    bottom: 3.9rem;
+    width: 26rem;
+    display: none;
+    left: 0;
+    background-color: #fff;
+    border: 0.1rem solid #665959;
+    padding: 1.5rem;
+}
+
+.family-site-box>li {
+    margin-top: 2rem;
+}
+
+.family-site-box>:first-child {
+    margin-top: 0;
+}
+
+.family-site-box>li>a {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.family-site-box>li>a:hover {
+    color: #75c17c;
 }
 
 .policy {
