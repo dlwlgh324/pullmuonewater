@@ -60,6 +60,7 @@ $(document).ready(function () {
     let depth_1 = $('.depth1');
 
     all_bt.click(function (event) {
+        $('html').css('overflow-y', 'hidden');
         event.preventDefault();
         depth_1.show();
         all_bt.hide();
@@ -67,6 +68,7 @@ $(document).ready(function () {
     });
 
     all_close.click(function (event) {
+        $('html').css('overflow-y', 'scroll');
         event.preventDefault();
         depth_1.hide();
         all_bt.show();
